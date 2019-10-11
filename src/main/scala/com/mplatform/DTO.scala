@@ -24,14 +24,6 @@ case class Mapping(addReduced: Array[String],
                    dspId: Int,
                    seatId: Int,
                    deviceType: String) {
-
-  def toAdobeFormat: AdobeFormat = {
-    val stringBuilder = new StringBuilder(visitorId) ++= " "
-    addReduced.foldLeft(stringBuilder)((b, s) => b ++= "d_sid=" ++= s ++= ",")
-    delReduced.foldLeft(stringBuilder)((b, s) => b ++= "d_unsid=" ++= s ++= ",")
-    stringBuilder.deleteCharAt(stringBuilder.length - 1)
-    AdobeFormat(accId, seatId, deviceType, stringBuilder.toString())
-  }
 }
 
 case class GroupedMapping(visitorId: String,
