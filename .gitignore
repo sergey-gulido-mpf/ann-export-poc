@@ -1,0 +1,16 @@
+.project
+.settings/
+.classpath
+.metadata/
+**/target/
+.DS_Store
+/copilot_ui/*.classpath
+/copilot_ui/.project
+/rest-client/
+/etl/.springBeans
+**/.idea/
+*.pmd
+**/*.iml
+**/.fbIncludeFilterFile
+/bin/
+pom.xml.versionsBackup
